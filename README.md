@@ -18,4 +18,17 @@ The project compares various classification and regression models and chooses th
 In this section, we import necessary libraries required for entire project. After that we import the csv data file and load it into pandas dataframe. 
 
 #### SECTION-2: Exploratory Data Analysis. ######
+In the first part, we format the variables in the proper manner. We convert the categorical variables such as "Gender", "Smoking Status" into numerical by replacing them with 0's and 1's. Also the attributes "Bedtime" and "Wakeup time" are converted to timestamp format. We then check for null values and the missing values are fileld with mean of that particular column. We didnot remove the rows with missing values just to avoid the information loss. 
+We then check the correlations between the variables and do feature selection based on that. We have done this by plotting correlation heat map which describes the correlation values between all the variables. We then remove the features which has high correlation because both the variables contribute the same to the target variable and so it will be redundant. The variables "Wakeup time" and "Deep sleep percentage" are removed in this regard and now finally we have 12 features left in the dataset. 
+
+####  SECTION-3: Checking data distribution for categorical attributes ######
+In this section, we plan to check the data distribution for categorical attributes in order to consider a feature do to fairness evaluation. We did distribution graphs for Gender, Smoking status, Awakenings, Exercise frequency. We observe that distribution is good only for Gender column. All the other variables have uneven distributions. So we use this feature to calculate fairness as the bias is minimum for this column. (There is equal number of datapoints for both Male and Female).
+
+#### SECTION-4: Linear Regression #####
+We created a copy of the final dataframe which is cleaned. The intension is to use one for classification and regression model respectively.
+
+In the next step, we perform linear regression with 5-fold cross validation and find the R2 score and Mean square error for each fold. We finally compute the average of MSE and R2 scores obtained in each fold. We got 79.7% of R2 score and 0.00036 for MSE. 
+
+#### SECTION-5: Ridge Regression ####
+
 
