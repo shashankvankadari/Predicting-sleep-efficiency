@@ -54,3 +54,5 @@ In this section of code we create our code for our app and finally run below cod
 
 On running the above line, it generates the local url to open our app online. 
 Keep the colab running and open the url in the browser. Enter the required values and click on predict button to predict the sleep efficiency.
+
+Note: This app is also hosted online and can be accessed via the url -- https://shashankvankadari-dsci441-repository-streamlit-app-0dk0xf.streamlit.app/ 
